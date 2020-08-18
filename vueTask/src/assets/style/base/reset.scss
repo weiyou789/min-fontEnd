@@ -1,0 +1,397 @@
+/**
+ * ElementUI 的样式重置
+ **/
+.el-main {
+    padding: 0;
+}
+
+.el-select {
+    width: 100%;
+}
+
+.el-breadcrumb {
+    line-height: normal;
+}
+
+.el-menu.el-menu--horizontal {
+    border-bottom: none;
+}
+
+.open {
+    width: 200px !important;
+    transition: .3s;
+
+    span {
+        opacity: 1;
+        transition: .1s;
+    }
+
+    .el-submenu {
+        .el-menu-item {
+            opacity: 1;
+            transition: .1s;
+        }
+    }
+}
+
+.open+.el-main .page-body {
+    min-width: calc(1280px - 200px - 40px);
+}
+
+.close {
+    width: 64px !important;
+    transition: .3s;
+
+    span {
+        opacity: 0;
+        transition: .1s;
+    }
+
+    .el-submenu {
+        .el-menu-item {
+            opacity: 0;
+            transition: .1s;
+        }
+    }
+}
+
+.close+.el-main .page-body {
+    min-width: calc(1280px - 64px - 40px);
+}
+
+.el-input {
+    .el-input__inner:focus {
+        border-color: $hosjoyColor !important;
+    }
+
+    &.is-focus {
+        border-color: $hosjoyColor !important;
+    }
+
+    &.is-focus .el-input__inner {
+        border-color: $hosjoyColor !important;
+    }
+}
+
+.el-textarea__inner:focus {
+    outline: 0;
+    border-color: $hosjoyColor !important;
+}
+
+.el-form-item {
+    &.is-error .el-input__inner {
+        border-color: $hosjoyColor;
+    }
+}
+
+.el-select-dropdown__item.selected {
+    color: $hosjoyColor;
+    font-weight: 700;
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner {
+    background-color: $hosjoyColor;
+    border-color: $hosjoyColor;
+}
+
+.el-checkbox__input.is-focus .el-checkbox__inner {
+    border-color: $hosjoyColor;
+}
+
+.el-checkbox__input.is-checked+.el-checkbox__label {
+    color: $hosjoyColor;
+}
+
+.el-checkbox__inner:hover {
+    border-color: $hosjoyColor;
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+    background-color: $hosjoyColor;
+    border-color: $hosjoyColor;
+}
+
+.el-radio__input.is-checked+.el-radio__label {
+    color: $hosjoyColor;
+}
+
+.el-radio__inner:hover {
+    border-color: $hosjoyColor;
+}
+
+.el-radio__input.is-focus .el-radio__inner {
+    border-color: $hosjoyColor;
+}
+
+//弹框
+.el-dialog {
+    position: absolute;
+    border-radius: 4px;
+    z-index: 2000;
+    left: 50%;
+    top: 50%;
+    margin: 0 !important;
+    transform: translate(-50%, -50%);
+    max-height: calc(100% - 30px);
+    max-width: calc(100% - 30px);
+}
+
+.el-dialog__header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #e5e5ea;
+}
+
+.el-dialog__body {
+    padding: 0 24px;
+    min-height: 228px;
+}
+
+.el-dialog__footer {
+    padding: 10px 24px;
+    border-top: 1px solid #e5e5ea;
+
+    .el-button:not(:first-child) {
+        margin-left: 20px;
+    }
+}
+
+.el-dialog__title {
+    font-size: 16px;
+    height: 14px;
+    line-height: 14px;
+}
+
+.el-dialog__headerbtn:focus .el-dialog__close {
+    color: $hosjoyColor;
+}
+
+.el-dialog__headerbtn:hover .el-dialog__close {
+    color: $hosjoyColor;
+}
+
+.el-message-box__headerbtn .el-message-box__close:hover {
+    color: $hosjoyColor;
+}
+
+.el-message{
+    top: 150px;
+}
+.el-message-box {
+    margin-bottom: 0;
+}
+
+.el-message-box__header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #e5e5ea;
+}
+
+.el-message-box__content {
+    min-height: 100px;
+}
+
+.el-message-box__btns {
+    padding: 10px 24px;
+    border-top: 1px solid #e5e5ea;
+
+    .el-button:nth-child(1) {
+        background: $whiteColor;
+        border-radius: 4px;
+        color: #666666;
+        border: 1px solid rgba(229, 229, 234, 1);
+
+        &:active {
+            border-color: $hosjoyColor;
+            background: $whiteColorActive;
+        }
+
+        &:hover {
+            border-color: $hosjoyColor;
+            background: $whiteColorHover;
+            color: $hosjoyColor;
+        }
+    }
+
+    .el-button:nth-child(2) {
+        background: $hosjoyColor;
+        border-radius: 4px;
+        color: $whiteColor;
+
+        &:active {
+            background: $hosjoyColorActive;
+        }
+
+        &:hover {
+            background: $hosjoyColorHover;
+        }
+    }
+}
+.el-button:focus, .el-button:hover{
+    background: rgba(255,244,240,1);
+    border: 1px solid rgba(255,148,106,1);
+    color: #FF7A45;
+}
+
+
+
+//分页
+.el-pager li.active {
+    color: $hosjoyColor;
+}
+
+.el-pager li:hover {
+    color: $hosjoyColor;
+}
+
+.el-pagination button:hover {
+    color: $hosjoyColor;
+}
+
+.el-pagination button:disabled {
+    color: #C0C4CC;
+    background-color: #FFF;
+    cursor: not-allowed;
+}
+
+//选项卡
+.el-tabs__header {
+    margin: 0 0 20px;
+}
+
+.el-tabs__item {
+    color: #666666;
+}
+
+.el-tabs__item.is-active {
+    color: $whiteColor;
+    background: $hosjoyColor;
+}
+
+.el-tabs__item.is-active:hover {
+    color: $whiteColor;
+}
+
+.el-tabs__item:hover {
+    color: $hosjoyColor;
+}
+
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: $hosjoyColor;
+    border-color: $hosjoyColor;
+}
+
+
+//图片上传框
+.el-upload--picture-card {
+    float: left;
+    margin-right: 20px;
+    width: 104px !important;
+    height: 104px !important;
+    line-height: 104px !important;
+}
+
+.el-upload--picture-card:hover,
+.el-upload:focus,
+.el-upload:hover {
+    border-color: $hosjoyColor !important;
+    color: $hosjoyColor !important;
+}
+
+.avatar-uploader {
+    float: left !important;
+    line-height: 0px;
+}
+
+
+//步骤条
+.el-step__icon.is-text {
+    border: 1px solid;
+}
+
+.el-step.is-horizontal .el-step__line {
+    margin: 0 16px;
+    height: 1px;
+}
+
+.el-step.is-center .el-step__line {
+    left: calc(50% + 16px);
+    right: calc(-50% + 32px);
+}
+
+.el-step__line-inner {
+    border-width: 0.5px !important;
+}
+
+.el-step__head.is-success {
+    color: $hosjoyColor;
+    border-color: $hosjoyColor;
+
+    .el-step__line-inner {
+        width: 100% !important;
+    }
+}
+
+.el-step__title.is-success {
+    color: $hosjoyColor;
+}
+
+
+.el-step__head.is-process {
+    color: $hosjoyColor;
+    border-color: $hosjoyColor;
+
+    .el-step__icon.is-text {
+        background: $hosjoyColor;
+    }
+
+    .el-step__icon-inner {
+        color: $whiteColor;
+        font-weight: 400;
+    }
+}
+
+.el-step__title.is-process {
+    font-weight: 400;
+    color: #000000;
+}
+
+.el-step__head.is-wait {
+    color: #E5E5EA;
+    border-color: #E5E5EA;
+}
+
+.el-step__line {
+    background-color: #E5E5EA;
+}
+
+.el-step__title.is-wait {
+    color: #999999;
+}
+
+.el-popper[x-placement^=bottom] .popper__arrow {
+    display: none;
+}
+
+.el-tooltip__popper.is-dark {
+    max-width: 500px;
+}
+
+/**
+  * 浏览器默认样式重置
+  **/
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    color: $blackColor;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+}

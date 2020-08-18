@@ -1,0 +1,473 @@
+@import "./base/atom.scss";
+@import "./base/reset.scss";
+@import "./base/scroll.scss";
+@import "./../icon/iconfont.css";
+
+/***************************    面包屑区域start    ************************************************************************************************/
+.breadcrumb-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    padding: 20px 24px;
+    font-size: 14px;
+    background: $whiteColor;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+}
+
+/***************************    面包屑区域end    ************************************************************************************************/
+
+/***************************    主区域start    ************************************************************************************************/
+.page-body {
+    // margin-top: 60px;
+    padding: 80px 20px 20px 20px;
+    position: relative;
+    height: auto;
+
+    // 公共模块
+    .page-body-cont {
+        padding: 20px 24px;
+        background: $whiteColor;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+
+        &:not(:first-child) {
+            margin-top: 1px;
+        }
+    }
+
+    // 搜索模块
+    .query-cont {
+        padding: 20px 24px 0px 24px;
+        background: rgba(250, 250, 250, 1);
+        box-shadow: 0px 1px 0px 0px rgba(229, 229, 234, 1);
+    }
+}
+
+/***************************    主区域end    ************************************************************************************************/
+
+/***************************    搜索区域start    ************************************************************************************************/
+.query-cont-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.query-cont-col {
+    position: relative;
+    margin-bottom: 20px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    // input标题
+    .query-col-title {
+        color: #000000;
+        font-size: 14px;
+    }
+
+    // 有标题input
+    .query-col-input {
+        .el-input {
+            width: 200px;
+        }
+
+        .el-select {
+            width: 100%;
+        }
+
+        .el-date-editor:not(:first-child) {
+            margin-left: 10px;
+        }
+    }
+
+    // 无标题input
+    .query-col-input.noTitle {
+        .el-input {
+            width: 224px;
+        }
+
+        .el-input__inner {
+            padding-left: 40px;
+        }
+    }
+
+    // 无标题input图标
+    .icon {
+        position: absolute;
+        left: 14px;
+        top: 12px;
+        z-index: 9;
+        color: $grayLight;
+    }
+
+    .el-button {
+        margin-left: 10px;
+    }
+}
+
+.query-cont-col:not(:last-child) {
+    margin-right: 24px;
+}
+
+/***************************    搜索区域end    ************************************************************************************************/
+
+/***************************    列表区域start    ************************************************************************************************/
+// 列表按钮模块
+.table-cont-btn {
+    margin-bottom: 10px;
+}
+
+// 列表标题模块
+.table-cont-title {
+    margin-bottom: 10px;
+    padding: 10px;
+    line-height: 40px;
+    background: #fafafa;
+
+    .table-title-name {
+        font-size: 17px;
+        margin-right: 20px;
+    }
+
+    .el-button {
+        float: right;
+    }
+}
+
+/***************************    列表区域end    ************************************************************************************************/
+
+/***************************    表单start   ************************************************************************************************/
+
+.el-form {
+    padding: 10px 0;
+
+
+
+    .el-form-item {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .el-input {
+        width: 224px;
+
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
+    }
+
+    .el-select {
+        width: 224px;
+    }
+
+    .el-date-editor:not(:first-child) {
+        margin-left: 10px;
+    }
+}
+
+.form-title-name {
+    padding: 20px 10px;
+    font-size: 17px;
+
+    span {
+        font-size: 12px;
+        color: $grayColor;
+    }
+}
+
+.form-cont-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-cont-col {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: calc((100% - 15px) / 3);
+
+    p,
+    span {
+        max-width: 400px;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // white-space: nowrap;
+    }
+}
+
+
+.form-cont-table {
+    margin-top: 10px;
+}
+
+/***************************    表单end    ************************************************************************************************/
+
+/***************************    文字按钮start    ************************************************************************************************/
+a.isLink {
+    color: #1890ff !important;
+    cursor: pointer;
+
+    span {
+        color: #1890ff !important;
+    }
+
+}
+
+.isOrangeColor {
+    color: $hosjoyColor !important;
+}
+
+.isGreenColor {
+    color: $greenColor !important;
+}
+
+.isGrayColor {
+    color: $grayLight !important;
+    cursor: not-allowed !important;
+}
+
+.isRedColor {
+    color: $redColor !important;
+}
+
+/***************************    文字按钮end    ************************************************************************************************/
+
+/***************************    自定义按钮start    ************************************************************************************************/
+.el-button {
+    border: 0;
+}
+
+.el-button[name="hosjoy-color"] {
+    font-weight: 400;
+    height: 40px;
+    padding: 10px 34px;
+    background: $hosjoyColor;
+    border-radius: 4px;
+    color: $whiteColor;
+
+    &:hover {
+        background: $hosjoyColorHover;
+    }
+
+    &:active {
+        background: $hosjoyColorActive;
+    }
+}
+
+.el-button[name="white-color"] {
+    font-weight: 400;
+    height: 40px;
+    padding: 10px 34px;
+    background: $whiteColor;
+    border-radius: 4px;
+    color: #666666;
+    border: 1px solid rgba(229, 229, 234, 1);
+
+    &:hover {
+        border-color: $hosjoyColor;
+        background: $whiteColorHover;
+        color: $hosjoyColor;
+    }
+
+    &:active {
+        border-color: $hosjoyColor;
+        background: $whiteColorActive;
+    }
+}
+
+.el-button[name="green-color"] {
+    font-weight: 400;
+    height: 40px;
+    padding: 10px 34px;
+    background: $greenColor;
+    border-radius: 4px;
+    color: $whiteColor;
+
+    &:hover {
+        background: $greenColorHover;
+    }
+
+    &:active {
+        background: $greenColorActive;
+    }
+}
+
+.el-button.orangeBtn {
+    padding: 5px 20px;
+    border: 1px solid $hosjoyColor;
+    color: $hosjoyColor;
+    font-size: 12px;
+    font-weight: 400;
+
+    &:hover {
+        background: $hosjoyColorHover;
+        color: $whiteColor;
+    }
+
+    &:active {
+        background: $hosjoyColorActive;
+        color: $whiteColor;
+    }
+}
+
+.el-button.greenBtn {
+    padding: 5px 20px;
+    border: 1px solid $greenColor;
+    color: $greenColor;
+    font-size: 12px;
+    font-weight: 400;
+
+    &:hover {
+        background: $greenColorHover;
+        color: $whiteColor;
+    }
+
+    &:active {
+        background: $greenColorActive;
+        color: $whiteColor;
+    }
+}
+
+.el-button.is-disabled {
+    border: 1px solid #E5E5EA;
+    color: #CCCCCC;
+    font-size: 12px;
+    font-weight: 400;
+    background: rgba(242, 242, 244, 1);
+
+    &:hover {
+        border: 1px solid #E5E5EA;
+        background: rgba(242, 242, 244, 1);
+        color: #CCCCCC;
+    }
+
+    &:active {
+        border: 1px solid #E5E5EA;
+        background: rgba(242, 242, 244, 1);
+        color: #CCCCCC;
+    }
+}
+
+/***************************    自定义按钮end    ************************************************************************************************/
+
+/***************************    弹窗start    ************************************************************************************************/
+
+.el-dialog {
+    .el-form {
+        .el-form-item {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .el-input {
+        width: 224px;
+    }
+
+    .el-select {
+        width: 224px;
+    }
+
+    // .el-form-item__content {
+    //     width: 224px;
+    // }
+}
+
+/***************************    弹窗end    ************************************************************************************************/
+
+/***************************    上传图片start    ************************************************************************************************/
+
+.picture-content {
+    ul {
+        padding: 0;
+    }
+
+    li {
+        float: left;
+        margin-right: 20px;
+        width: 106px;
+        height: 106px;
+        background-color: #fbfdff;
+        border: 1px dashed #c0ccda;
+        border-radius: 6px;
+        box-sizing: border-box;
+        z-index: 4;
+        line-height: 102px;
+        text-align: center;
+
+        img {
+            max-width: 104px;
+            max-height: 104px;
+            z-index: 4;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            .mask {
+                z-index: 2;
+                transition: .3s;
+            }
+
+            .mask-btn {
+                z-index: 2;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+.picture-prompt {
+    margin-top: 30px;
+    float: left;
+    color: $grayColor;
+    width: 248px;
+    height: 44px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+/***************************    上传图片end    ************************************************************************************************/
+
+/***************************    步骤条start    ************************************************************************************************/
+
+.form-cont-steps {
+    padding: 10px 0;
+    margin-top: 10px !important;
+    margin-bottom: 30px !important;
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+
+/***************************    步骤条end    ************************************************************************************************/
+
+//红色字体
+.red-word {
+    color: $redColor;
+}
+
+//说明文字title
+.caption-title {
+    font-size: 12px;
+    color: $blackLight;
+}
+
+//说明文字content
+.caption-cont {
+    font-size: 12px;
+    color: $grayColor;
+}

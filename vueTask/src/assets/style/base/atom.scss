@@ -1,0 +1,31 @@
+$num:1;
+$style:(t:top, r:right, b:bottom, l:left);
+
+@each $key,
+$value in $style {
+    @for $i from 1 to 101 {
+
+        //margin(top,right,bottom,left)
+        .m#{$key}#{$num*$i} {
+            margin-#{$value}: #{$num*$i}px !important;
+        }
+
+        //padding(top,right,bottom,left) 
+        .p#{$key}#{$num*$i} {
+            padding-#{$value}: #{$num*$i}px !important;
+        }
+
+    }
+
+    .fl#{$key} {
+        float: $value !important;
+    }
+}
+
+.clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
